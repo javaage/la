@@ -43,7 +43,7 @@ public class UserController {
 		userModel.setBu("test");
 		userModel.setBudget(10.0d);
 		userModel.setGrade("test");
-		userModel.setId("test@test.com");
+		userModel.setId("test1@test.com");
 		userModel.setName("test");
 		userModel.setRoleName("test");
 		userModel.setTitle("title");

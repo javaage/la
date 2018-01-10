@@ -6,28 +6,7 @@
   <typeAliases>
     <package name="com.cisco.la.model"/>
   </typeAliases>
-
-  <environments default="development">
-    <environment id="development">
-      <transactionManager type="JDBC" />
-      <dataSource type="POOLED">
-        <property name="driver" value="org.postgresql.Driver" />
-        <property name="url" value="jdbc:postgresql://localhost:5432/la" />
-        <property name="username" value="postgres" />
-        <property name="password" value="19786028" />
-      </dataSource>
-    </environment>
-    <environment id="product">
-      <transactionManager type="JDBC" />
-      <dataSource type="POOLED">
-        <property name="driver" value="org.postgresql.Driver" />
-        <property name="url" value="jdbc:postgresql://google/postgres?useSSL=false&amp;socketFactoryArg=newagent-25039:asia-northeast1:la&amp;socketFactory=com.google.cloud.sql.postgres.SocketFactory&amp;user=postgres&amp;password=la123456" />
-        <property name="username" value="postgres" />
-        <property name="password" value="la123456" />
-      </dataSource>
-    </environment>
-  </environments>
-
+  
   <mappers>
     <mapper resource="com/cisco/la/mapper/CourseModelMapper.xml" />
     <mapper resource="com/cisco/la/mapper/CourseHistoryModelMapper.xml" />
