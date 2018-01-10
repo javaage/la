@@ -17,14 +17,14 @@ import org.springframework.web.filter.CorsFilter;
 @Configuration
 public class AppConfiguration {
 
-	@Bean
-	public static PropertySourcesPlaceholderConfigurer properties() {
-		PropertySourcesPlaceholderConfigurer propertySourcesPlaceholderConfigurer = new PropertySourcesPlaceholderConfigurer();
-		YamlPropertiesFactoryBean yaml = new YamlPropertiesFactoryBean();
-		yaml.setResources(new ClassPathResource("app.yaml"));
-		propertySourcesPlaceholderConfigurer.setProperties(yaml.getObject());
-		return propertySourcesPlaceholderConfigurer;
-	}
+//	@Bean
+//	public static PropertySourcesPlaceholderConfigurer properties() {
+//		PropertySourcesPlaceholderConfigurer propertySourcesPlaceholderConfigurer = new PropertySourcesPlaceholderConfigurer();
+//		YamlPropertiesFactoryBean yaml = new YamlPropertiesFactoryBean();
+//		yaml.setResources(new ClassPathResource("app.yaml"));
+//		propertySourcesPlaceholderConfigurer.setProperties(yaml.getObject());
+//		return propertySourcesPlaceholderConfigurer;
+//	}
 
 	@Bean
 	public PlatformTransactionManager txManager(DataSource dataSource) {
