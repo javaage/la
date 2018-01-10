@@ -3,12 +3,8 @@ import com.cisco.la.model.RoleHistoryModel;
 import java.util.List;
 import java.util.ArrayList;
 
-public class RoleHistoryService {
-  public void addRoleHistory(RoleHistoryModel roleHistoryModel){
+public interface RoleHistoryService {
+  public void addRoleHistory(RoleHistoryModel roleHistoryModel);
 
-  }
-
-  public List<RoleHistoryModel> getRoleHistoryList(){
-    return null;
-  }
+  public List<RoleHistoryModel> getRoleHistoryList();
 }

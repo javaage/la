@@ -3,20 +3,12 @@ import java.util.List;
 import java.util.ArrayList;
 import com.cisco.la.model.CourseModel;
 
-public class CourseService {
-  public void addCourse(CourseModel courseModel){
+public interface CourseService {
+  public void addCourse(CourseModel courseModel);
 
-  }
+  public void inactiveCourse(int id);
 
-  public void inactiveCourse(int id){
+  public void updateCourse(CourseModel courseModel);
 
-  }
-
-  public void updateCourse(CourseModel courseModel){
-
-  }
-
-  public List<CourseModel> getCourseList(){
-    return null;
-  }
+  public List<CourseModel> getCourseList();
 }
