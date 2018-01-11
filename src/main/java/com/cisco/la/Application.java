@@ -16,25 +16,35 @@
 
 package com.cisco.la;
 
+import javax.sql.DataSource;
+
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.jdbc.DataSourceBuilder;
 import org.springframework.boot.context.web.SpringBootServletInitializer;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-//@EnableAutoConfiguration
+@EnableAutoConfiguration
 //@ComponentScan(basePackages = "com.cisco.la")
 //@EnableCaching
 //@EnableTransactionManagement
 @Configuration
 @SpringBootApplication
 public class Application extends SpringBootServletInitializer {
-
+	private static String url = "";
 	public static void main(String[] args) throws Exception {
-		SpringApplication.run(Application.class, args);
+		ApplicationContext ctx = SpringApplication.run(Application.class, args);
+		url = ctx.getEnvironment().getProperty("spring.datasource.url");
 	}
 	
-//	@Bean
-//    public DataSource primaryDataSource() {
-//        return DataSourceBuilder.create().build();
-//    }
+	@Bean
+    public DataSource primaryDataSource() {
+		DataSourceBuilder builder = DataSourceBuilder.create();
+		builder.driverClassName("org.postgresql.Driver");
+		builder.url(url);
+        return builder.build();
+    }
 }
