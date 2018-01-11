@@ -9,7 +9,7 @@
 	</parent>
 	<artifactId>la</artifactId>
 	<groupId>com.oracle</groupId>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 	<name>Spring Boot Web Static Sample</name>
 	<description>Spring Boot Web Static Sample</description>
 	<version>0.0.1-SNAPSHOT</version>
